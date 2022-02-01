@@ -1,132 +1,253 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.site')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
+<section id="main-container" class="main-container">
+    <div class="container">
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+        <div class="row">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+            <div class="col-12">
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
+                <div class="topics">
+                    
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 24 24">
+                                        <path d="M23.003 9.448a.4.4 0 0 0-.4.4v1.105a.4.4 0 0 1-.4.4h-.67c-.232 0-.415.197-.409.429l-.003.543c-.008.234.175.434.409.434h.674a.4.4 0 0 1 .4.4v1.008a.4.4 0 0 0 .4.4h.597a.4.4 0 0 0 .4-.4v-4.32a.4.4 0 0 0-.4-.4h-.597zM18.97 1.987a.4.4 0 0 0-.566 0l-.429.429a.4.4 0 0 0 0 .566l.782.782a.4.4 0 0 1 0 .566l-.477.477c-.164.164-.154.432.014.592l.382.387c.159.171.43.183.596.018l.479-.48a.4.4 0 0 1 .566 0l.713.713a.4.4 0 0 0 .566 0l.429-.429a.4.4 0 0 0 0-.566L18.97 1.987zm2.614 15.989a.4.4 0 0 0-.566 0l-.781.782a.4.4 0 0 1-.566 0l-.477-.477c-.164-.164-.432-.154-.592.014l-.387.382c-.171.159-.183.43-.018.596l.479.479a.4.4 0 0 1 0 .566l-.713.713a.4.4 0 0 0 0 .566l.429.429a.4.4 0 0 0 .566 0l3.055-3.055a.4.4 0 0 0 0-.566l-.429-.429zM9.848 0a.4.4 0 0 0-.4.4v.597a.4.4 0 0 0 .4.4h1.105a.4.4 0 0 1 .4.4v.67c0 .232.197.415.429.409l.543.003c.234.008.434-.175.434-.409v-.674a.4.4 0 0 1 .4-.4h1.008a.4.4 0 0 0 .4-.4V.4a.4.4 0 0 0-.4-.4h-4.32zm3.198 22.603a.4.4 0 0 1-.4-.4v-.67c0-.232-.197-.415-.429-.409a9.11 9.11 0 0 1-.543-.003c-.234-.008-.434.175-.434.409v.674a.4.4 0 0 1-.4.4H9.832a.4.4 0 0 0-.4.4v.597a.4.4 0 0 0 .4.4h4.32a.4.4 0 0 0 .4-.4v-.597a.4.4 0 0 0-.4-.4h-1.105zM6.036 2.97a.4.4 0 0 0 0-.566l-.429-.429a.4.4 0 0 0-.566 0L1.987 5.03a.4.4 0 0 0 0 .566l.429.429a.4.4 0 0 0 .566 0l.782-.782a.4.4 0 0 1 .566 0l.477.477c.164.164.432.154.592-.014l.387-.382c.171-.159.183-.43.018-.596l-.48-.48a.4.4 0 0 1 0-.566l.713-.713zm-.793 17.267a.4.4 0 0 1 0-.566l.477-.477c.164-.164.154-.432-.014-.592l-.382-.387c-.159-.171-.43-.183-.596-.018l-.48.479a.4.4 0 0 1-.566 0l-.713-.713a.4.4 0 0 0-.566 0l-.429.429a.4.4 0 0 0 0 .566l3.054 3.055a.4.4 0 0 0 .566 0l.429-.429a.4.4 0 0 0 0-.566l-.782-.781zM2.88 11.674c.008-.234-.175-.434-.409-.434h-.674a.4.4 0 0 1-.4-.4V9.832a.4.4 0 0 0-.4-.4H.4a.4.4 0 0 0-.4.4v4.32a.4.4 0 0 0 .4.4h.597a.4.4 0 0 0 .4-.4v-1.105a.4.4 0 0 1 .4-.4h.67c.232 0 .415-.197.409-.429l.003-.543zM12 4.28A7.73 7.73 0 0 0 4.28 12 7.73 7.73 0 0 0 12 19.72 7.73 7.73 0 0 0 19.72 12 7.73 7.73 0 0 0 12 4.28zM8.503 9.783a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406zm2.063 2.154a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406zm0-4.316a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406zm4.248 8.632a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406zm0-4.316a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406zm2.063 2.162a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406z"></path>
+                                    </svg>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
+                            <div class="topic-title">
+                                <h6>
+                                    Covid-19
+                                </h6>
                             </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
+                        </a>
                     </div>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 14.2786 0.635065 16.4088 1.73785 18.2234L0.866821 22.2882C0.704663 23.0449 1.42665 23.6911 2.16085 23.4464L5.75432 22.2486C7.57373 23.3597 9.71209 24 12 24ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12V18C14 19.1046 13.1046 20 12 20C10.8954 20 10 19.1046 10 18V12ZM12 5C10.8954 5 10 5.89543 10 7C10 8.10457 10.8954 9 12 9C13.1046 9 14 8.10457 14 7C14 5.89543 13.1046 5 12 5Z" fill="black"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    Transparência
+                                </h6>
+                            </div>
+                        </a>
                     </div>
+
+
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 24 24">
+                                    <path d="M10.2 1.2a7.8 7.8 0 0 0-6.81 11.607l-.954 2.498a1.2 1.2 0 0 0 1.445 1.584l2.984-.836a7.8 7.8 0 0 0 10.943-5.343A7.8 7.8 0 0 0 10.2 1.2h0zm-.008 4.681c-.43.084-.9.362-1.27 1.015a.6.6 0 0 1-.818.225.6.6 0 0 1-.225-.818c.529-.931 1.282-1.444 2.083-1.6a2.92 2.92 0 0 1 2.15.433c.581.384 1.05 1.012 1.064 1.764.016.786-.462 1.495-1.343 2.016-.598.353-.83.593-.93.752-.084.134-.103.257-.103.53a.6.6 0 0 1-1.2 0c0-.326.017-.732.284-1.164.252-.404.683-.764 1.338-1.152.642-.38.758-.742.755-.958-.006-.248-.17-.552-.528-.788a1.72 1.72 0 0 0-1.258-.257h0zM10.5 13.8a.9.9 0 1 1 0-1.8.9.9 0 1 1 0 1.8zm-2.657 3.888c.732.852 1.639 1.535 2.659 2.003s2.13.71 3.253.709a7.77 7.77 0 0 0 3.336-.748l2.984.836a1.2 1.2 0 0 0 1.443-1.584l-.955-2.498c.631-1.127.991-2.425.991-3.806a7.78 7.78 0 0 0-2.639-5.848c.175.677.272 1.386.282 2.114a6.57 6.57 0 0 1 1.157 3.733c0 1.26-.353 2.437-.966 3.439l-.154.252 1.164 3.042-3.432-.96-.21.106c-.9.461-1.92.721-3.002.721a6.57 6.57 0 0 1-3.8-1.204c-.714-.019-1.423-.122-2.112-.308h0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    Ouvidoria Cidadã
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 24 24">
+                                    <path d="M10.525 13.475c1.9 1.898 4.1 3.715 4.97 2.845 1.244-1.244 2.012-2.329 4.758-.122s.636 3.677-.57 4.882c-1.392 1.392-6.581.074-11.71-5.053S1.532 5.708 2.926 4.316c1.206-1.207 2.67-3.314 4.876-.57s1.123 3.512-.124 4.758c-.866.87.949 3.071 2.848 4.97z" fill="#000"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    Procon
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 29 29">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.18143 23.4115L10.5 20.5L2.00001 17L0.873275 22.2581C0.709721 23.0214 1.44467 23.6694 2.18143 23.4115Z" fill="black"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22H21C27.0751 22 32 17.0751 32 11C32 4.92487 27.0751 0 21 0H11ZM14.9129 16.884C14.1263 16.884 13.733 16.6777 13.733 16.2652V7.31215C13.733 6.89963 14.1263 6.69337 14.9129 6.69337H15.4635C16.2501 6.69337 16.6434 6.89963 16.6434 7.31215V16.2652C16.6434 16.6777 16.2501 16.884 15.4635 16.884H14.9129ZM15.1882 5.74586C14.2181 5.74586 13.733 5.53959 13.733 5.12707V3.61878C13.733 3.20626 14.2181 3 15.1882 3C16.1583 3 16.6434 3.20626 16.6434 3.61878V5.12707C16.6434 5.53959 16.1583 5.74586 15.1882 5.74586ZM8.2644 17C7.45158 17 6.70431 16.8775 6.02258 16.6326C5.34086 16.3877 5 16.0718 5 15.6851C5 15.4273 5.12455 15.1179 5.37364 14.7569C5.62273 14.3831 5.8456 14.1961 6.04225 14.1961C6.14713 14.1961 6.29134 14.2477 6.47488 14.3508C6.75019 14.4669 6.99928 14.5635 7.22215 14.6409C7.45814 14.7053 7.72689 14.7376 8.02842 14.7376C8.42172 14.7376 8.7167 14.6667 8.91335 14.5249C9.12311 14.3831 9.22799 14.1832 9.22799 13.9254C9.22799 13.6676 9.11656 13.4678 8.89369 13.326C8.67081 13.1842 8.25129 12.9843 7.63512 12.7265C7.17627 12.5331 6.78297 12.3398 6.45522 12.1464C6.12746 11.9401 5.83904 11.6436 5.58995 11.2569C5.35397 10.8573 5.23598 10.3545 5.23598 9.74862C5.23598 8.75598 5.55718 7.9825 6.19957 7.42818C6.84196 6.86096 7.71378 6.57735 8.81503 6.57735C9.50986 6.57735 10.1719 6.67403 10.8012 6.8674C11.4436 7.06077 11.7648 7.33794 11.7648 7.69889C11.7648 7.94383 11.6665 8.25967 11.4698 8.64641C11.2732 9.03315 11.0896 9.22652 10.9192 9.22652C10.8667 9.22652 10.6701 9.16206 10.3292 9.03315C9.98838 8.89134 9.60163 8.82044 9.169 8.82044C8.47416 8.82044 8.12675 9.05893 8.12675 9.53591C8.12675 9.81952 8.24474 10.0387 8.48072 10.1934C8.7167 10.3352 9.14278 10.5157 9.75895 10.7348C10.4407 10.9797 11.0044 11.3214 11.4501 11.7597C11.8959 12.1851 12.1188 12.8296 12.1188 13.6934C12.1188 14.6989 11.7779 15.5046 11.0962 16.1105C10.4145 16.7035 9.47053 17 8.2644 17ZM19.8222 15.7431C20.6351 16.581 21.8805 17 23.5586 17C23.8733 17 24.3059 16.9549 24.8565 16.8646C25.4071 16.7873 25.8988 16.6455 26.3314 16.4392C26.7771 16.233 27 15.9687 27 15.6464C27 15.5175 26.941 15.337 26.823 15.105C26.7181 14.86 26.5805 14.6473 26.41 14.4668C26.2527 14.2735 26.1085 14.1768 25.9774 14.1768C25.9512 14.1768 25.8332 14.2155 25.6234 14.2928C25.571 14.3186 25.453 14.3637 25.2695 14.4282C25.099 14.4926 24.8762 14.5635 24.6009 14.6409C24.3387 14.7053 24.0371 14.7376 23.6963 14.7376C22.9621 14.7376 22.4246 14.4991 22.0837 14.0221C21.756 13.5322 21.5921 12.7845 21.5921 11.779C21.5921 10.7735 21.7691 10.0322 22.1231 9.55525C22.477 9.07827 23.0408 8.83978 23.8143 8.83978C24.1813 8.83978 24.4894 8.87845 24.7385 8.9558C25.0007 9.03315 25.2629 9.13628 25.5251 9.26519C25.7087 9.35543 25.8267 9.40055 25.8791 9.40055C26.0364 9.40055 26.2462 9.20074 26.5084 8.8011C26.7837 8.40147 26.9213 8.10497 26.9213 7.9116C26.9213 7.49908 26.5739 7.1768 25.8791 6.94475C25.1974 6.69982 24.4567 6.57735 23.6569 6.57735C21.9264 6.57735 20.6482 7.0221 19.8222 7.9116C19.0094 8.78821 18.603 10.1031 18.603 11.8564C18.603 13.5967 19.0094 14.8923 19.8222 15.7431Z" fill="black"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    E-Sic
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 29 29">
+                                    <path fill-rule="evenodd" d="M13 3.5V9h5.5L13 3.5zM4 4c0-1.11.89-2 2-2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm7.557 10.66l4.822 4.39h.001c.14.127.162.323.05.436l-.443.444c-.112.113-.308.09-.435-.05l-4.378-4.835-.249.249c-.183.184-.421.284-.663.299l-.013.026-.565.908a.38.38 0 0 1-.256.086c-.093-.004-.181-.042-.248-.106l-1.574-1.578a.38.38 0 0 1-.02-.505l.905-.566c.008-.005.017-.009.026-.013.015-.242.114-.48.298-.664l.856-.859c.183-.184.421-.284.663-.299l.012-.026.565-.908a.38.38 0 0 1 .504.02l1.574 1.578a.38.38 0 0 1 .02.505l-.905.566c-.008.005-.017.009-.026.013a1.03 1.03 0 0 1-.298.664l-.224.225z" fill="#000"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    Licitação
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+
+                    
+
+                   
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 24 24">
+                                        <path d="M23.003 9.448a.4.4 0 0 0-.4.4v1.105a.4.4 0 0 1-.4.4h-.67c-.232 0-.415.197-.409.429l-.003.543c-.008.234.175.434.409.434h.674a.4.4 0 0 1 .4.4v1.008a.4.4 0 0 0 .4.4h.597a.4.4 0 0 0 .4-.4v-4.32a.4.4 0 0 0-.4-.4h-.597zM18.97 1.987a.4.4 0 0 0-.566 0l-.429.429a.4.4 0 0 0 0 .566l.782.782a.4.4 0 0 1 0 .566l-.477.477c-.164.164-.154.432.014.592l.382.387c.159.171.43.183.596.018l.479-.48a.4.4 0 0 1 .566 0l.713.713a.4.4 0 0 0 .566 0l.429-.429a.4.4 0 0 0 0-.566L18.97 1.987zm2.614 15.989a.4.4 0 0 0-.566 0l-.781.782a.4.4 0 0 1-.566 0l-.477-.477c-.164-.164-.432-.154-.592.014l-.387.382c-.171.159-.183.43-.018.596l.479.479a.4.4 0 0 1 0 .566l-.713.713a.4.4 0 0 0 0 .566l.429.429a.4.4 0 0 0 .566 0l3.055-3.055a.4.4 0 0 0 0-.566l-.429-.429zM9.848 0a.4.4 0 0 0-.4.4v.597a.4.4 0 0 0 .4.4h1.105a.4.4 0 0 1 .4.4v.67c0 .232.197.415.429.409l.543.003c.234.008.434-.175.434-.409v-.674a.4.4 0 0 1 .4-.4h1.008a.4.4 0 0 0 .4-.4V.4a.4.4 0 0 0-.4-.4h-4.32zm3.198 22.603a.4.4 0 0 1-.4-.4v-.67c0-.232-.197-.415-.429-.409a9.11 9.11 0 0 1-.543-.003c-.234-.008-.434.175-.434.409v.674a.4.4 0 0 1-.4.4H9.832a.4.4 0 0 0-.4.4v.597a.4.4 0 0 0 .4.4h4.32a.4.4 0 0 0 .4-.4v-.597a.4.4 0 0 0-.4-.4h-1.105zM6.036 2.97a.4.4 0 0 0 0-.566l-.429-.429a.4.4 0 0 0-.566 0L1.987 5.03a.4.4 0 0 0 0 .566l.429.429a.4.4 0 0 0 .566 0l.782-.782a.4.4 0 0 1 .566 0l.477.477c.164.164.432.154.592-.014l.387-.382c.171-.159.183-.43.018-.596l-.48-.48a.4.4 0 0 1 0-.566l.713-.713zm-.793 17.267a.4.4 0 0 1 0-.566l.477-.477c.164-.164.154-.432-.014-.592l-.382-.387c-.159-.171-.43-.183-.596-.018l-.48.479a.4.4 0 0 1-.566 0l-.713-.713a.4.4 0 0 0-.566 0l-.429.429a.4.4 0 0 0 0 .566l3.054 3.055a.4.4 0 0 0 .566 0l.429-.429a.4.4 0 0 0 0-.566l-.782-.781zM2.88 11.674c.008-.234-.175-.434-.409-.434h-.674a.4.4 0 0 1-.4-.4V9.832a.4.4 0 0 0-.4-.4H.4a.4.4 0 0 0-.4.4v4.32a.4.4 0 0 0 .4.4h.597a.4.4 0 0 0 .4-.4v-1.105a.4.4 0 0 1 .4-.4h.67c.232 0 .415-.197.409-.429l.003-.543zM12 4.28A7.73 7.73 0 0 0 4.28 12 7.73 7.73 0 0 0 12 19.72 7.73 7.73 0 0 0 19.72 12 7.73 7.73 0 0 0 12 4.28zM8.503 9.783a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406zm2.063 2.154a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406zm0-4.316a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406zm4.248 8.632a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406zm0-4.316a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406zm2.063 2.162a.5.5 0 0 1-.5.5h-.388a.5.5 0 0 1-.5-.5v-.406a.5.5 0 0 1 .5-.5h.388a.5.5 0 0 1 .5.5v.406z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    Covid-19
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 14.2786 0.635065 16.4088 1.73785 18.2234L0.866821 22.2882C0.704663 23.0449 1.42665 23.6911 2.16085 23.4464L5.75432 22.2486C7.57373 23.3597 9.71209 24 12 24ZM10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12V18C14 19.1046 13.1046 20 12 20C10.8954 20 10 19.1046 10 18V12ZM12 5C10.8954 5 10 5.89543 10 7C10 8.10457 10.8954 9 12 9C13.1046 9 14 8.10457 14 7C14 5.89543 13.1046 5 12 5Z" fill="black"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    Transparência
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 24 24">
+                                    <path d="M10.2 1.2a7.8 7.8 0 0 0-6.81 11.607l-.954 2.498a1.2 1.2 0 0 0 1.445 1.584l2.984-.836a7.8 7.8 0 0 0 10.943-5.343A7.8 7.8 0 0 0 10.2 1.2h0zm-.008 4.681c-.43.084-.9.362-1.27 1.015a.6.6 0 0 1-.818.225.6.6 0 0 1-.225-.818c.529-.931 1.282-1.444 2.083-1.6a2.92 2.92 0 0 1 2.15.433c.581.384 1.05 1.012 1.064 1.764.016.786-.462 1.495-1.343 2.016-.598.353-.83.593-.93.752-.084.134-.103.257-.103.53a.6.6 0 0 1-1.2 0c0-.326.017-.732.284-1.164.252-.404.683-.764 1.338-1.152.642-.38.758-.742.755-.958-.006-.248-.17-.552-.528-.788a1.72 1.72 0 0 0-1.258-.257h0zM10.5 13.8a.9.9 0 1 1 0-1.8.9.9 0 1 1 0 1.8zm-2.657 3.888c.732.852 1.639 1.535 2.659 2.003s2.13.71 3.253.709a7.77 7.77 0 0 0 3.336-.748l2.984.836a1.2 1.2 0 0 0 1.443-1.584l-.955-2.498c.631-1.127.991-2.425.991-3.806a7.78 7.78 0 0 0-2.639-5.848c.175.677.272 1.386.282 2.114a6.57 6.57 0 0 1 1.157 3.733c0 1.26-.353 2.437-.966 3.439l-.154.252 1.164 3.042-3.432-.96-.21.106c-.9.461-1.92.721-3.002.721a6.57 6.57 0 0 1-3.8-1.204c-.714-.019-1.423-.122-2.112-.308h0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    Ouvidoria Cidadã
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 24 24">
+                                    <path d="M10.525 13.475c1.9 1.898 4.1 3.715 4.97 2.845 1.244-1.244 2.012-2.329 4.758-.122s.636 3.677-.57 4.882c-1.392 1.392-6.581.074-11.71-5.053S1.532 5.708 2.926 4.316c1.206-1.207 2.67-3.314 4.876-.57s1.123 3.512-.124 4.758c-.866.87.949 3.071 2.848 4.97z" fill="#000"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    Procon
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 29 29">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.18143 23.4115L10.5 20.5L2.00001 17L0.873275 22.2581C0.709721 23.0214 1.44467 23.6694 2.18143 23.4115Z" fill="black"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22H21C27.0751 22 32 17.0751 32 11C32 4.92487 27.0751 0 21 0H11ZM14.9129 16.884C14.1263 16.884 13.733 16.6777 13.733 16.2652V7.31215C13.733 6.89963 14.1263 6.69337 14.9129 6.69337H15.4635C16.2501 6.69337 16.6434 6.89963 16.6434 7.31215V16.2652C16.6434 16.6777 16.2501 16.884 15.4635 16.884H14.9129ZM15.1882 5.74586C14.2181 5.74586 13.733 5.53959 13.733 5.12707V3.61878C13.733 3.20626 14.2181 3 15.1882 3C16.1583 3 16.6434 3.20626 16.6434 3.61878V5.12707C16.6434 5.53959 16.1583 5.74586 15.1882 5.74586ZM8.2644 17C7.45158 17 6.70431 16.8775 6.02258 16.6326C5.34086 16.3877 5 16.0718 5 15.6851C5 15.4273 5.12455 15.1179 5.37364 14.7569C5.62273 14.3831 5.8456 14.1961 6.04225 14.1961C6.14713 14.1961 6.29134 14.2477 6.47488 14.3508C6.75019 14.4669 6.99928 14.5635 7.22215 14.6409C7.45814 14.7053 7.72689 14.7376 8.02842 14.7376C8.42172 14.7376 8.7167 14.6667 8.91335 14.5249C9.12311 14.3831 9.22799 14.1832 9.22799 13.9254C9.22799 13.6676 9.11656 13.4678 8.89369 13.326C8.67081 13.1842 8.25129 12.9843 7.63512 12.7265C7.17627 12.5331 6.78297 12.3398 6.45522 12.1464C6.12746 11.9401 5.83904 11.6436 5.58995 11.2569C5.35397 10.8573 5.23598 10.3545 5.23598 9.74862C5.23598 8.75598 5.55718 7.9825 6.19957 7.42818C6.84196 6.86096 7.71378 6.57735 8.81503 6.57735C9.50986 6.57735 10.1719 6.67403 10.8012 6.8674C11.4436 7.06077 11.7648 7.33794 11.7648 7.69889C11.7648 7.94383 11.6665 8.25967 11.4698 8.64641C11.2732 9.03315 11.0896 9.22652 10.9192 9.22652C10.8667 9.22652 10.6701 9.16206 10.3292 9.03315C9.98838 8.89134 9.60163 8.82044 9.169 8.82044C8.47416 8.82044 8.12675 9.05893 8.12675 9.53591C8.12675 9.81952 8.24474 10.0387 8.48072 10.1934C8.7167 10.3352 9.14278 10.5157 9.75895 10.7348C10.4407 10.9797 11.0044 11.3214 11.4501 11.7597C11.8959 12.1851 12.1188 12.8296 12.1188 13.6934C12.1188 14.6989 11.7779 15.5046 11.0962 16.1105C10.4145 16.7035 9.47053 17 8.2644 17ZM19.8222 15.7431C20.6351 16.581 21.8805 17 23.5586 17C23.8733 17 24.3059 16.9549 24.8565 16.8646C25.4071 16.7873 25.8988 16.6455 26.3314 16.4392C26.7771 16.233 27 15.9687 27 15.6464C27 15.5175 26.941 15.337 26.823 15.105C26.7181 14.86 26.5805 14.6473 26.41 14.4668C26.2527 14.2735 26.1085 14.1768 25.9774 14.1768C25.9512 14.1768 25.8332 14.2155 25.6234 14.2928C25.571 14.3186 25.453 14.3637 25.2695 14.4282C25.099 14.4926 24.8762 14.5635 24.6009 14.6409C24.3387 14.7053 24.0371 14.7376 23.6963 14.7376C22.9621 14.7376 22.4246 14.4991 22.0837 14.0221C21.756 13.5322 21.5921 12.7845 21.5921 11.779C21.5921 10.7735 21.7691 10.0322 22.1231 9.55525C22.477 9.07827 23.0408 8.83978 23.8143 8.83978C24.1813 8.83978 24.4894 8.87845 24.7385 8.9558C25.0007 9.03315 25.2629 9.13628 25.5251 9.26519C25.7087 9.35543 25.8267 9.40055 25.8791 9.40055C26.0364 9.40055 26.2462 9.20074 26.5084 8.8011C26.7837 8.40147 26.9213 8.10497 26.9213 7.9116C26.9213 7.49908 26.5739 7.1768 25.8791 6.94475C25.1974 6.69982 24.4567 6.57735 23.6569 6.57735C21.9264 6.57735 20.6482 7.0221 19.8222 7.9116C19.0094 8.78821 18.603 10.1031 18.603 11.8564C18.603 13.5967 19.0094 14.8923 19.8222 15.7431Z" fill="black"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    E-Sic
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="topic col-md-2">
+                        <a href="">
+                            <div class="icon-box">
+                                <div class="topic-icon">
+                                    <!-- <span class="fa-stack fa-3x"><i class="fa fa-covid-19 fa-stack-1x"></i></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:v="https://vecta.io/nano" width="56" height="45" fill="#000" class="img-fluid svg replaced-svg" viewBox="0 0 29 29">
+                                    <path fill-rule="evenodd" d="M13 3.5V9h5.5L13 3.5zM4 4c0-1.11.89-2 2-2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm7.557 10.66l4.822 4.39h.001c.14.127.162.323.05.436l-.443.444c-.112.113-.308.09-.435-.05l-4.378-4.835-.249.249c-.183.184-.421.284-.663.299l-.013.026-.565.908a.38.38 0 0 1-.256.086c-.093-.004-.181-.042-.248-.106l-1.574-1.578a.38.38 0 0 1-.02-.505l.905-.566c.008-.005.017-.009.026-.013.015-.242.114-.48.298-.664l.856-.859c.183-.184.421-.284.663-.299l.012-.026.565-.908a.38.38 0 0 1 .504.02l1.574 1.578a.38.38 0 0 1 .02.505l-.905.566c-.008.005-.017.009-.026.013a1.03 1.03 0 0 1-.298.664l-.224.225z" fill="#000"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="topic-title">
+                                <h6>
+                                    Licitação
+                                </h6>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
+
             </div>
-        </div>
-    </body>
-</html>
+
+        </div><!-- Content row -->
+    </div><!-- Conatiner end -->
+</section><!-- Main container end -->
+
+@endsection

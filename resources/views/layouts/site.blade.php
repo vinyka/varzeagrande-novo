@@ -79,14 +79,14 @@
     <div class="container">
       <div class="logo-area">
           <div class="row align-items-center">
-            <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+            <div class="logo col-lg-4 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
                 <a class="d-block" href="index.html">
-                  <img loading="lazy" src="{{  asset('images/logo.png') }}" alt="Constra">
+                  <img loading="lazy" src="{{  asset('images/logo.svg') }}" alt="Prefeitura de Várzea Grande">
                 </a>
             </div><!-- logo end -->
   
-            <div class="col-lg-9 header-right">
-              <img src="http://www.varzeagrande.mt.gov.br/images/pre-cadastro-vacina.jpg" width="768">
+            <div class="col-lg-8 header-right">
+              <img class="img-fluid" src="http://www.varzeagrande.mt.gov.br/images/pre-cadastro-vacina.jpg">
                 <!-- <ul class="top-info-box">
                   <li>
                     <div class="info-box">
@@ -145,35 +145,35 @@
                       </li>
 
                       <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Secretaria e Orgãos <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Secretaria e Orgãos </a>
+                          <!-- <ul class="dropdown-menu" role="menu">
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="team.html">Our People</a></li>
                             <li><a href="testimonials.html">Testimonials</a></li>
                             <li><a href="faq.html">Faq</a></li>
                             <li><a href="pricing.html">Pricing</a></li>
-                          </ul>
+                          </ul> -->
                       </li>
               
                       <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Serviços <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Serviços </a>
+                          <!-- <ul class="dropdown-menu" role="menu">
                             <li><a href="projects.html">Projects All</a></li>
                             <li><a href="projects-single.html">Projects Single</a></li>
-                          </ul>
+                          </ul> -->
                       </li>
               
                       <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Licitação <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Licitação</a>
+                          <!-- <ul class="dropdown-menu" role="menu">
                             <li><a href="services.html">Services All</a></li>
                             <li><a href="service-single.html">Services Single</a></li>
-                          </ul>
+                          </ul> -->
                       </li>
               
                       <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Legislação <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Legislação</a>
+                          <!-- <ul class="dropdown-menu" role="menu">
                             <li><a href="typography.html">Typography</a></li>
                             <li><a href="404.html">404</a></li>
                             <li class="dropdown-submenu">
@@ -183,17 +183,17 @@
                                   <li><a href="#!">Child Menu 2</a></li>
                                   <li><a href="#!">Child Menu 3</a></li>
                                 </ul>
-                            </li>
-                          </ul>
+                            </li> 
+                          </ul> -->
                       </li>
               
                       <li class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Expediente <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" role="menu">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Expediente</a>
+                          <!-- <ul class="dropdown-menu" role="menu">
                             <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
                             <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
                             <li><a href="news-single.html">News Single</a></li>
-                          </ul>
+                          </ul> -->
                       </li>
               
                       <li class="nav-item"><a class="nav-link" href="contact.html">Plano diretor</a></li>

@@ -86,7 +86,7 @@
             </div><!-- logo end -->
   
             <div class="col-lg-8 header-right">
-              <img class="img-fluid" src="http://www.varzeagrande.mt.gov.br/images/pre-cadastro-vacina.jpg">
+              <img class="img-fluid" src="{{ asset('images/pre-cadastro-vacina.jpg')}}">
                 <!-- <ul class="top-info-box">
                   <li>
                     <div class="info-box">

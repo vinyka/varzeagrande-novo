@@ -50,6 +50,19 @@
     @include('components.banners')
 </div>
 
+
+<section id="ts-features" class="ts-features">
+    <div class="container">
+        <div class="row">
+            
+
+
+        </div>
+    </div>
+</section>
+
+<!--end code-->
+
 <section id="ts-features" class="ts-features">
     <div class="container">
         <div class="row">
@@ -57,7 +70,43 @@
                 <div class="ts-intro">
                     <h2 class="into-title"><img src="https://img.icons8.com/ios/21/000000/tv-show.png" /> Web TV</h2>
                     <h3 class="into-sub-title">Apresentando Várzea Grande</h3>
-                    <p><iframe width="100%" height="350" src="https://www.youtube.com/embed/I2Faw4RAXkU"></iframe></p>
+                    <!-- <p><iframe width="100%" height="350" src="https://www.youtube.com/embed/I2Faw4RAXkU"></iframe></p> -->
+                    <div id="page-slider" class="page-slider small-bg">
+
+                        <div class="item" style="background-image:url(http://img.youtube.com/vi/I2Faw4RAXkU/maxresdefault.jpg)">
+                            <div class="container">
+                                <div class="box-slider-content">
+                                    <div class="box-slider-text">
+                                        <h2 class="box-slide-title">Várzea Grande em números</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 1 end -->
+
+                        <div class="item" style="background-image:url(http://img.youtube.com/vi/I2Faw4RAXkU/maxresdefault.jpg)">
+                            <div class="container">
+                                <div class="box-slider-content">
+                                    <div class="box-slider-text">
+                                        <h2 class="box-slide-title">Relationships</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="item" style="background-image:url(images/slider-pages/slide-page3.jpg)">
+                            <div class="container">
+                                <div class="box-slider-content">
+                                    <div class="box-slider-text">
+                                        <h2 class="box-slide-title">Performance</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Page slider end-->
                 </div>
                 <!-- Intro box end -->
 
@@ -66,7 +115,8 @@
             <!-- Col end -->
 
             <div class="col-lg-6 mt-4 mt-lg-0">
-                <h2 class="into-title"><img src="https://img.icons8.com/dotty/21/000000/tabletop-radio.png" /> Web Rádio</h2>
+                <h2 class="into-title"><img src="https://img.icons8.com/dotty/21/000000/tabletop-radio.png" /> Podcast
+                </h2>
                 <h3 class="into-sub-title">Inscrições para o curso de Microempreendedor Individual poderão ser feitas até o dia 2 de fevereiro</h3>
                 <p>
                     <script type="text/javascript" player-tytle="Programa #03" player-ip="78.129.234.163" player-porta="17386" player-autoplay="false" src="https://lucianobragaweb.github.io/webradio-player/player.js"></script>
@@ -84,7 +134,8 @@
                             </div> -->
                             <div class="post-info">
                                 <h4 class="entry-title">
-                                    <a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/circled-play.png" /> - #02 - {{ date("d/m/Y")}} - We Just Completes $17.6 Million Medical Clinic In Mid-missouri</a>
+                                    <a href="#">#02 - {{ date("d/m/Y")}} - We Just Completes $17.6 Million Medical
+                                        Clinic In Mid-missouri</a>
                                 </h4>
                             </div>
                         </li>
@@ -96,7 +147,8 @@
                             </div> -->
                             <div class="post-info">
                                 <h4 class="entry-title">
-                                    <a href="#"><img src="https://img.icons8.com/material-outlined/24/000000/circled-play.png" /> - #01 - {{ date("d/m/Y")}} - Thandler Airport Water Reclamation Facility Expansion Project Named</a>
+                                    <a href="#">#01 - {{ date("d/m/Y")}} - Thandler Airport Water Reclamation Facility
+                                        Expansion Project Named</a>
                                 </h4>
                             </div>
                         </li>
@@ -133,171 +185,160 @@
 <!--/ subscribe end -->
 
 
-
-<section id="main-container" class="main-container">
+<section id="ts-team" class="ts-team">
     <div class="container">
         <div class="row text-center">
-            <div class="col-12">
-                <h2 class="section-title">Secretaria de Comunicação</h2>
-                <h3 class="section-sub-title">Assessoria de Imprensa</h3>
+            <div class="col-lg-12">
+                <h2 class="section-title">Comunicação</h2>
+                <h3 class="section-sub-title">Assessoria de imprenssa</h3>
             </div>
         </div>
+        <!--/ Title row end -->
+
         <div class="row">
-            <div class="col-12">
-                <!-- <div class="shuffle-btn-group">
-                    <label class="active" for="all">
-                        <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Show All
-                    </label>
-                    <label for="commercial">
-                        <input type="radio" name="shuffle-filter" id="commercial" value="commercial">Commercial
-                    </label>
-                    <label for="education">
-                        <input type="radio" name="shuffle-filter" id="education" value="education">Education
-                    </label>
-                    <label for="government">
-                        <input type="radio" name="shuffle-filter" id="government" value="government">Government
-                    </label>
-                    <label for="infrastructure">
-                        <input type="radio" name="shuffle-filter" id="infrastructure"
-                            value="infrastructure">Infrastructure
-                    </label>
-                    <label for="residential">
-                        <input type="radio" name="shuffle-filter" id="residential" value="residential">Residential
-                    </label>
-                    <label for="healthcare">
-                        <input type="radio" name="shuffle-filter" id="healthcare" value="healthcare">Healthcare
-                    </label>
-                </div> -->
-                <!-- project filter end -->
+            <div class="col-lg-12">
+                <div id="team-slide" class="team-slide">
+                    <div class="item">
+                        <div class="ts-team-wrapper">
+                            <div class="team-img-wrapper">
+                                <img loading="lazy" class="w-100" src="{{ asset('images/team/team1.jpg') }}" alt="team-img">
+                            </div>
+                            <div class="ts-team-content">
+                                <a href="#">
+                                    <h3 class="ts-name">Nats Stenman</h3>
+                                    <!-- <p class="ts-designation">Chief Operating Officer</p> -->
+                                    <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                                    <!-- <div class="team-social-icons">
+                                    <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                                </div> -->
+                                </a>
 
-
-                <div class="row shuffle-wrapper">
-                    <div class="col-1 shuffle-sizer"></div>
-
-                    <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;government&quot;,&quot;healthcare&quot;]">
-                        <div class="project-img-container">
-                            <a class="gallery-popup" href="images/projects/project1.jpg">
-                                <img class="img-fluid" src="images/projects/project1.jpg" alt="project-image">
-                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <a href="#">Capital Teltway Building</a>
-                                    </h3>
-                                    <p class="project-cat">Commercial, Interiors</p>
-                                </div>
+                                <!--/ social-icons-->
                             </div>
                         </div>
+                        <!--/ Team wrapper end -->
                     </div>
-                    <!-- shuffle item 1 end -->
+                    <!-- Team 1 end -->
 
-                    <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;healthcare&quot;]">
-                        <div class="project-img-container">
-                            <a class="gallery-popup" href="images/projects/project2.jpg">
-                                <img class="img-fluid" src="images/projects/project2.jpg" alt="project-image">
-                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <a href="#">Ghum Touch Hospital</a>
-                                    </h3>
-                                    <p class="project-cat">Healthcare</p>
-                                </div>
+                    <div class="item">
+                        <div class="ts-team-wrapper">
+                            <div class="team-img-wrapper">
+                                <img loading="lazy" class="w-100" src="images/team/team2.jpg" alt="team-img">
+                            </div>
+                            <div class="ts-team-content">
+                                <h3 class="ts-name">Angela Lyouer</h3>
+                                <!-- <p class="ts-designation">Innovation Officer</p> -->
+                                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                                <!-- <div class="team-social-icons">
+                                    <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                                </div> -->
+                                <!--/ social-icons-->
                             </div>
                         </div>
+                        <!--/ Team wrapper end -->
                     </div>
-                    <!-- shuffle item 2 end -->
+                    <!-- Team 2 end -->
 
-                    <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;commercial&quot;]">
-                        <div class="project-img-container">
-                            <a class="gallery-popup" href="images/projects/project3.jpg">
-                                <img class="img-fluid" src="images/projects/project3.jpg" alt="project-image">
-                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <a href="#">TNT East Facility</a>
-                                    </h3>
-                                    <p class="project-cat">Government</p>
-                                </div>
+                    <div class="item">
+                        <div class="ts-team-wrapper">
+                            <div class="team-img-wrapper">
+                                <img loading="lazy" class="w-100" src="images/team/team3.jpg" alt="team-img">
+                            </div>
+                            <div class="ts-team-content">
+                                <h3 class="ts-name">Mark Conter</h3>
+                                <!-- <p class="ts-designation">Safety Officer</p> -->
+                                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                                <!-- <div class="team-social-icons">
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                                </div> -->
+                                <!--/ social-icons-->
                             </div>
                         </div>
+                        <!--/ Team wrapper end -->
                     </div>
-                    <!-- shuffle item 3 end -->
+                    <!-- Team 3 end -->
 
-                    <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;education&quot;,&quot;infrastructure&quot;]">
-                        <div class="project-img-container">
-                            <a class="gallery-popup" href="images/projects/project4.jpg">
-                                <img class="img-fluid" src="images/projects/project4.jpg" alt="project-image">
-                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <a href="#">Narriot Headquarters</a>
-                                    </h3>
-                                    <p class="project-cat">Infrastructure</p>
-                                </div>
+                    <div class="item">
+                        <div class="ts-team-wrapper">
+                            <div class="team-img-wrapper">
+                                <img loading="lazy" class="w-100" src="images/team/team4.jpg" alt="team-img">
+                            </div>
+                            <div class="ts-team-content">
+                                <h3 class="ts-name">Ayesha Stewart</h3>
+                                <!-- <p class="ts-designation">Finance Officer</p> -->
+                                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                                <!-- <div class="team-social-icons">
+                                    <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                                </div> -->
+                                <!--/ social-icons-->
                             </div>
                         </div>
+                        <!--/ Team wrapper end -->
                     </div>
-                    <!-- shuffle item 4 end -->
+                    <!-- Team 4 end -->
 
-                    <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;education&quot;]">
-                        <div class="project-img-container">
-                            <a class="gallery-popup" href="images/projects/project5.jpg">
-                                <img class="img-fluid" src="images/projects/project5.jpg" alt="project-image">
-                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <a href="#">Kalas Metrorail</a>
-                                    </h3>
-                                    <p class="project-cat">Infrastructure</p>
-                                </div>
+                    <div class="item">
+                        <div class="ts-team-wrapper">
+                            <div class="team-img-wrapper">
+                                <img loading="lazy" class="w-100" src="images/team/team5.jpg" alt="team-img">
+                            </div>
+                            <div class="ts-team-content">
+                                <h3 class="ts-name">Dave Clarkte</h3>
+                                <!-- <p class="ts-designation">Civil Engineer</p> -->
+                                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                                <!-- <div class="team-social-icons">
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                                </div> -->
+                                <!--/ social-icons-->
                             </div>
                         </div>
+                        <!--/ Team wrapper end -->
                     </div>
-                    <!-- shuffle item 5 end -->
+                    <!-- Team 5 end -->
 
-                    <div class="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;]">
-                        <div class="project-img-container">
-                            <a class="gallery-popup" href="images/projects/project6.jpg">
-                                <img class="img-fluid" src="images/projects/project6.jpg" alt="project-image">
-                                <span class="gallery-icon"><i class="fa fa-plus"></i></span>
-                            </a>
-                            <div class="project-item-info">
-                                <div class="project-item-info-content">
-                                    <h3 class="project-item-title">
-                                        <a href="#">Ancraft Avenue House</a>
-                                    </h3>
-                                    <p class="project-cat">Residential</p>
-                                </div>
+                    <div class="item">
+                        <div class="ts-team-wrapper">
+                            <div class="team-img-wrapper">
+                                <img loading="lazy" class="w-100" src="images/team/team6.jpg" alt="team-img">
+                            </div>
+                            <div class="ts-team-content">
+                                <h3 class="ts-name">Elton Joe</h3>
+                                <!-- <p class="ts-designation">Site Supervisor</p> -->
+                                <p class="ts-description">Nats Stenman began his career in construction with boots on the ground</p>
+                                <!-- <div class="team-social-icons">
+                                    <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-google-plus"></i></a>
+                                    <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                                </div> -->
+                                <!--/ social-icons-->
                             </div>
                         </div>
+                        <!--/ Team wrapper end -->
                     </div>
-                    <!-- shuffle item 6 end -->
+                    <!-- Team 6 end -->
+
                 </div>
-                <!-- shuffle end -->
+                <!-- Team slide end -->
             </div>
-
-            <div class="col-12">
-                <div class="general-btn text-center">
-                    <a class="btn btn-primary" href="#">Todas a notícias</a>
-                </div>
-            </div>
-
         </div>
-        <!-- Content row end -->
-
+        <!--/ Content row end -->
     </div>
-    <!-- Conatiner end -->
+    <!--/ Container end -->
 </section>
-<!-- Main container end -->
+<!--/ Team end -->
 
 
 <section id="news" class="news">
@@ -320,7 +361,8 @@
                     </div>
                     <div class="post-body">
                         <h4 class="post-title">
-                            <a href="#" class="d-inline-block">GAAT repassa quase R$100 mil em recursos do Bazar do Bem para o lar dos idosos</a>
+                            <a href="#" class="d-inline-block">GAAT repassa quase R$100 mil em recursos do Bazar do Bem
+                                para o lar dos idosos</a>
                         </h4>
                         <div class="latest-post-meta">
                             <span class="post-item-date">
@@ -342,7 +384,8 @@
                     </div>
                     <div class="post-body">
                         <h4 class="post-title">
-                            <a href="#" class="d-inline-block">Primeira-dama Kika Dorilêo visita Cras e reforça apoio às ações e serviços sociais</a>
+                            <a href="#" class="d-inline-block">Primeira-dama Kika Dorilêo visita Cras e reforça apoio às
+                                ações e serviços sociais</a>
                         </h4>
                         <div class="latest-post-meta">
                             <span class="post-item-date">
@@ -364,7 +407,8 @@
                     </div>
                     <div class="post-body">
                         <h4 class="post-title">
-                            <a href="#" class="d-inline-block">Kalil Baracat lança programa visando ampliar a geração de emprego e renda</a>
+                            <a href="#" class="d-inline-block">Kalil Baracat lança programa visando ampliar a geração de
+                                emprego e renda</a>
                         </h4>
                         <div class="latest-post-meta">
                             <span class="post-item-date">
@@ -380,7 +424,7 @@
         <!--/ Content row end -->
 
         <div class="general-btn text-center mt-4">
-            <a class="btn btn-primary" href="#">Ver todas notícias do GAAT</a>
+            <a class="btn btn-primary" href="#">Ver todas as notícias</a>
         </div>
 
     </div>

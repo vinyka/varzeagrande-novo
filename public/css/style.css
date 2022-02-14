@@ -2603,7 +2603,8 @@ img.testimonial-thumb {
 }
 
 .latest-post .post-title a:hover {
-    color: #ffb600;
+    /* color: #ffb600; */
+    color: #ff000f;
 }
 
 .latest-post-meta {
@@ -3048,7 +3049,8 @@ img.testimonial-thumb {
     padding: 15px 25px;
     margin-top: 0;
     color: #fff;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
+    background: rgba(236, 50, 55, 0.5);
     transition: 350ms;
 }
 
@@ -3069,7 +3071,8 @@ img.testimonial-thumb {
     margin-top: 0;
     margin-bottom: 3px;
     line-height: normal;
-    color: #ffb600;
+    /* color: #ffb600; */
+    color: #FFF;
 }
 
 .ts-team-wrapper .ts-designation {
@@ -3700,7 +3703,7 @@ label {
 }
 
 .widget.recent-posts .post-info .entry-title a:hover {
-    color: #ffb600;
+    color: #EC3237;
 }
 
 .widget.recent-posts .post-date {

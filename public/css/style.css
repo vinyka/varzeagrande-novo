@@ -2911,7 +2911,7 @@ img.testimonial-thumb {
 }
 
 .page-slider .carousel-control i:hover {
-    background: #ffb600;
+    background: #ff000f;
     color: #fff;
 }
 
@@ -2921,7 +2921,7 @@ img.testimonial-thumb {
 }
 
 .page-slider.small-bg .box-slider-content {
-    left: 20%;
+    /* left: 20%; */
 }
 
 .page-slider.small-bg .box-slider-text {

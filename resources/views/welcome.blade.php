@@ -63,11 +63,11 @@
             <div class="col-lg-6">
                 <div class="ts-intro">
                     <h2 class="into-title"><img src="https://img.icons8.com/ios/21/000000/tv-show.png" /> Web TV</h2>
-                    <h3 class="into-sub-title">Apresentando Várzea Grande</h3>
+                    <!-- <h3 class="into-sub-title">Apresentando Várzea Grande</h3> -->
                     <!-- <p><iframe width="100%" height="350" src="https://www.youtube.com/embed/I2Faw4RAXkU"></iframe></p> -->
                     <div id="page-slider" class="page-slider small-bg">
 
-                        <div class="item" style="background-image:url(http://img.youtube.com/vi/I2Faw4RAXkU/maxresdefault.jpg)">
+                        <div class="item img-fluid" style="background-image:url(http://img.youtube.com/vi/I2Faw4RAXkU/maxresdefault.jpg)">
                             <div class="container">
                                 <div class="box-slider-content">
                                     <div class="box-slider-text">
@@ -78,26 +78,16 @@
                         </div>
                         <!-- Item 1 end -->
 
-                        <div class="item" style="background-image:url(http://img.youtube.com/vi/I2Faw4RAXkU/maxresdefault.jpg)">
+                        <div class="item" style="background-image:url(http://img.youtube.com/vi/XKFTbrxY4zE/maxresdefault.jpg)">
                             <div class="container">
                                 <div class="box-slider-content">
                                     <div class="box-slider-text">
-                                        <h2 class="box-slide-title">Relationships</h2>
+                                        <h2 class="box-slide-title">Várzea Grande vai aderir ao programa de Educação Ambiental</h2>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-
-                        <div class="item" style="background-image:url(images/slider-pages/slide-page3.jpg)">
-                            <div class="container">
-                                <div class="box-slider-content">
-                                    <div class="box-slider-text">
-                                        <h2 class="box-slide-title">Performance</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                     <!-- Page slider end-->
@@ -257,11 +247,6 @@
             <!-- 3rd post col end -->
         </div>
         <!--/ Content row end -->
-
-        <div class="general-btn text-center mt-4">
-            <a class="btn btn-primary" href="#">Ver todas as notícias</a>
-        </div>
-
     </div>
     <!--/ Container end -->
 </section>

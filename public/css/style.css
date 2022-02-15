@@ -3801,3 +3801,13 @@ label {
 .topics .topic:active .fa-inverse {
     color: #333;
 }
+
+.bordaIcone {
+    background-color: #FFF;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: content-box;
+    min-height: 120px;
+    ;
+}

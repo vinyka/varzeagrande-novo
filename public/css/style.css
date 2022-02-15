@@ -612,7 +612,7 @@ a[href^=tel] {
 
 .top-bar {
     padding: 8px 0;
-    background: #01660A;
+    background: #276f47;
     color: #FFF;
     /*#ebebeb;*/
     position: relative;
@@ -719,7 +719,7 @@ ul.top-info li p.info-text {
 .header-one,
 .header-one .site-navigation {
     /* background: #23282d; */
-    background: #01660A;
+    background: #276f47;
     /*#E21B1D;*/
 }
 
@@ -1221,7 +1221,7 @@ ul.navbar-nav>li>a {
     right: -4px;
     font-size: 32px;
     cursor: pointer;
-    background: #01660A;
+    background: #276f47;
     padding: 5px;
 }
 
@@ -2528,7 +2528,7 @@ img.testimonial-thumb {
 /* Newsletter */
 
 .ts-newsletter {
-    background: #01660A;
+    background: #276f47;
     position: relative;
     min-height: 115px;
     padding: 15px 0 0 50px;
@@ -2553,7 +2553,7 @@ img.testimonial-thumb {
 .ts-newsletter:after {
     content: "";
     position: absolute;
-    background: #01660A;
+    background: #276f47;
     display: block;
     width: 100%;
     height: 100%;
@@ -2721,7 +2721,7 @@ img.testimonial-thumb {
 
 .copyright {
     /* background: #ffb600; */
-    background: #01660A;
+    background: #276f47;
     color: #FFF;
     padding: 25px 0 15px;
     position: relative;
@@ -3810,4 +3810,9 @@ label {
     box-sizing: content-box;
     min-height: 120px;
     ;
+}
+
+.podCastPlayer {
+    width: 100%;
+    margin: 20px;
 }

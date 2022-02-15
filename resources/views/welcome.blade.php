@@ -109,46 +109,46 @@
             <!-- Col end -->
 
             <div class="col-lg-6 mt-4 mt-lg-0">
-                <h2 class="into-title"><img src="https://img.icons8.com/dotty/21/000000/tabletop-radio.png" /> Podcast
-                </h2>
-                <h3 class="into-sub-title">Inscrições para o curso de Microempreendedor Individual poderão ser feitas até o dia 2 de fevereiro</h3>
-                <p>
-                    <script type="text/javascript" player-tytle="Programa #03" player-ip="78.129.234.163" player-porta="17386" player-autoplay="false" src="https://lucianobragaweb.github.io/webradio-player/player.js"></script>
-                </p>
+                <h2 class="into-title">
+                    <h2 class="into-title">
+                        <img src="https://img.icons8.com/ios/21/000000/block-microphone--v2.png" /> Podcast
+                    </h2>
+                    <h3 class="into-sub-title">Inscrições para o curso de Microempreendedor Individual poderão ser feitas até o dia 2 de fevereiro</h3>
+                    <p>
+                        <audio controls="" class="podCastPlayer"><source src="http://78.129.234.163:17386/;stream.mp3" type="audio/mp3">Seu navegador não suporta o elemento de áudio.</audio>
+                    </p>
 
 
 
-                <div class="widget recent-posts">
-                    <!-- <h3 class="widget-title">Recent Posts</h3> -->
-                    <br>
-                    <ul class="list-unstyled">
-                        <li class="d-flex align-items-center">
-                            <!-- <div class="posts-thumb">
+                    <div class="widget recent-posts">
+                        <!-- <h3 class="widget-title">Recent Posts</h3> -->
+                        <br>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center">
+                                <!-- <div class="posts-thumb">
                                 <a href="#"><img loading="lazy" alt="news-image" src="{{ asset('images/news/news1.jpg') }}"></a>
                             </div> -->
-                            <div class="post-info">
-                                <h4 class="entry-title">
-                                    <a href="#">#02 - {{ date("d/m/Y")}} - We Just Completes $17.6 Million Medical
-                                        Clinic In Mid-missouri</a>
-                                </h4>
-                            </div>
-                        </li>
-                        <!-- 1st post end-->
+                                <div class="post-info">
+                                    <h4 class="entry-title">
+                                        <a href="#"><img src="https://img.icons8.com/ios/18/000000/block-microphone--v2.png">#02 - {{ date("d/m/Y")}} - We Just Completes $17.6 Million Medical Clinic In Mid-missouri</a>
+                                    </h4>
+                                </div>
+                            </li>
+                            <!-- 1st post end-->
 
-                        <li class="d-flex align-items-center">
-                            <!-- <div class="posts-thumb">
+                            <li class="d-flex align-items-center">
+                                <!-- <div class="posts-thumb">
                                 <a href="#"><img loading="lazy" alt="news-img" src="{{ asset('images/news/news2.jpg') }}"></a>
                             </div> -->
-                            <div class="post-info">
-                                <h4 class="entry-title">
-                                    <a href="#">#01 - {{ date("d/m/Y")}} - Thandler Airport Water Reclamation Facility
-                                        Expansion Project Named</a>
-                                </h4>
-                            </div>
-                        </li>
-                        <!-- 2nd post end-->
+                                <div class="post-info">
+                                    <h4 class="entry-title">
+                                        <a href="#"><img src="https://img.icons8.com/ios/18/000000/block-microphone--v2.png" /> #01 - {{ date("d/m/Y")}} - Thandler Airport Water Reclamation Facility Expansion Project Named</a>
+                                    </h4>
+                                </div>
+                            </li>
+                            <!-- 2nd post end-->
 
-                        <!-- <li class="d-flex align-items-center">
+                            <!-- <li class="d-flex align-items-center">
                                     <div class="posts-thumb">
                                         <a href="#"><img loading="lazy" alt="news-img" src="{{ asset('images/news/news3.jpg') }}"></a>
                                     </div>
@@ -159,10 +159,10 @@
                                     </div>
                                 </li> -->
 
-                    </ul>
+                        </ul>
 
-                </div>
-                <!-- Recent post end -->
+                    </div>
+                    <!-- Recent post end -->
 
 
             </div>

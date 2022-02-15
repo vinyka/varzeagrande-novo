@@ -44,8 +44,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-8">
                         <ul class="top-info text-center text-md-left">
-                            <li>Várzea Grande,
-                                <?php echo strftime('%A, %d de %B de %Y', strtotime(date("Y-m-d"))); ?>
+                            <li>Várzea Grande, {{ date("d/m/Y"); }}.
                             </li>
                         </ul>
                     </div>
@@ -84,7 +83,7 @@
                         <div class="row align-items-center">
                             <div class="logo col-lg-4 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
                                 <a class="d-block" href="index.html">
-                                    <img loading="lazy" src="{{  asset('images/logo.svg') }}" alt="Prefeitura de Várzea Grande">
+                                    <img class="img-fluid" loading="lazy" src="{{  asset('images/logo.svg') }}" alt="Prefeitura de Várzea Grande">
                                 </a>
                             </div>
                             <!-- logo end -->

@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="shuffle-btn-group">
                     <label class="active" for="all">
-                        <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Todos os serviços
+                        <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked">Todos
                     </label>
                     <label for="cidadao">
                         <input type="radio" name="shuffle-filter" id="cidadao" value="cidadao">Cidadão

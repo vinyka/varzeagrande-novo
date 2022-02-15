@@ -350,7 +350,7 @@
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="http://www.varzeagrande.mt.gov.br/storage/imagem/bf6fc9aa8087de37df8217415bb872e4.jpg" alt="img">
+                            <img loading="lazy" class="img-fluid" src="{{ asset('images/banner/gaat1.jpg')}}" alt="img">
                         </a>
                     </div>
                     <div class="post-body">
@@ -373,7 +373,7 @@
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="http://www.varzeagrande.mt.gov.br/storage/imagem/751803a7431856c5de5990af2c158ffc.JPG" alt="img">
+                            <img loading="lazy" class="img-fluid" src="{{ asset('images/banner/gaat2.jpg')}}" alt="img">
                         </a>
                     </div>
                     <div class="post-body">
@@ -396,7 +396,7 @@
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="http://www.varzeagrande.mt.gov.br/storage/imagem/1299b7438582c908a37e7febe7d2f115.jpg" alt="img">
+                            <img loading="lazy" class="img-fluid" src="{{ asset('images/banner/gaat3.jpg')}}" alt="img">
                         </a>
                     </div>
                     <div class="post-body">

@@ -1,10 +1,12 @@
 @extends('layouts.site') @section('content')
 
-<section id="main-container" class="main-container">
-    @include('components.servicos')
-</section>
-<!-- Main container end -->
 
+<section id="main-container" class="main-container" style="background-color: #F9F9F9;">
+    @include('components.servicos1')
+</section>
+
+
+<!-- Main container end -->
 
 <section class="subscribe no-padding">
     <div class="container">
@@ -51,15 +53,7 @@
 </div>
 
 
-<section id="ts-features" class="ts-features">
-    <div class="container">
-        <div class="row">
-            
 
-
-        </div>
-    </div>
-</section>
 
 <!--end code-->
 

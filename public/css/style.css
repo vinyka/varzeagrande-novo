@@ -304,7 +304,7 @@ a:focus {
     font-weight: 900;
     font-size: 22px;
     line-height: 46px;
-    margin: 0 0 60px;
+    margin: 0 0 30px;
     color: #212121;
 }
 
@@ -2028,7 +2028,7 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
     display: inline-block;
     margin: 20px 0 50px;
     width: 100%;
-    border-bottom: 3px solid #ffb600;
+    /* border-bottom: 3px solid #FF0000; */
 }
 
 .shuffle-btn-group label {
@@ -2058,8 +2058,9 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
 }
 
 .shuffle-btn-group label.active {
-    color: #212121;
-    background: #ffb600;
+    color: #FFF;
+    border-radius: 10px;
+    background: #FF0000/*#ffb600;*/
 }
 
 .shuffle-btn-group label input {

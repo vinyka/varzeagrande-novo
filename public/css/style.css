@@ -136,6 +136,22 @@ a.read-more:hover {
     color: #222;
 }
 
+/* Section border e margin - IMG Proporcional*/
+
+section#ts-features, section#news{
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    min-height: 360px;
+    position: relative;
+    background: #f2f5f4;
+    border-radius: 25px;
+    text-align: center;
+    padding: 20px;
+  }
+/* Fim section border e margin */
+
 section,
 .section-padding {
     padding: 30px 0;
@@ -1853,7 +1869,7 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
 }
 
 
-/* Service box 
+/* Service box
 
 .ts-service-box .ts-service-icon i {
   font-size: 24px;

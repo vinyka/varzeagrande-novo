@@ -138,6 +138,11 @@ a.read-more:hover {
 
 /* Section border e margin - IMG Proporcional*/
 
+.img-thumbnail{
+    max-width: 300px;
+    height: 200px;
+}
+
 section#ts-features, section#news{
     margin-top: 10px;
     margin-left: 50px;
@@ -150,6 +155,7 @@ section#ts-features, section#news{
     text-align: center;
     padding: 20px;
   }
+
 /* Fim section border e margin */
 
 section,

@@ -17,7 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 // Route::get('/', [App\Http\Controllers\FrontendController::class, 'index'])->name('welcome');
-// Route::get('conteudo', [App\Http\Controllers\FrontendController::class, 'conteudo'])->name('conteudo');
+Route::get('conteudo', [App\Http\Controllers\FrontendController::class, 'conteudo'])->name('conteudo');
+Route::get('blank', [App\Http\Controllers\FrontendController::class, 'blank'])->name('blank');
 
 Auth::routes();
 

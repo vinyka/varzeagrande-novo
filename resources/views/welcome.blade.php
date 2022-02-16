@@ -183,7 +183,7 @@
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="{{ asset('images/news/1.jpg')}}" alt="img">
+                            <img loading="lazy" class="img-thumbnail" src="{{ asset('images/news/1.jpg')}}" alt="img">
                         </a>
                     </div>
                     <div class="post-body">
@@ -206,7 +206,7 @@
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="{{ asset('images/news/4.jpg')}}" alt="img">
+                            <img loading="lazy" class="img-thumbnail" src="{{ asset('images/news/4.jpg')}}" alt="img">
                         </a>
                     </div>
                     <div class="post-body">
@@ -228,7 +228,7 @@
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="{{ asset('images/news/3.jpg')}}" alt="img">
+                            <img loading="lazy" class="img-thumbnail" src="{{ asset('images/news/3.jpg')}}" alt="img">
                         </a>
                     </div>
                     <div class="post-body">
@@ -268,7 +268,7 @@
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="{{ asset('images/banner/gaat1.jpg')}}" alt="img">
+                            <img loading="lazy" class="img-thumbnail" src="{{ asset('images/banner/gaat1.jpg')}}" alt="img">
                         </a>
                     </div>
                     <div class="post-body">
@@ -291,7 +291,7 @@
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="{{ asset('images/banner/gaat2.jpg')}}" alt="img">
+                            <img loading="lazy" class="img-thumbnail" src="{{ asset('images/banner/gaat2.jpg')}}" alt="img">
                         </a>
                     </div>
                     <div class="post-body">
@@ -314,7 +314,7 @@
                 <div class="latest-post">
                     <div class="latest-post-media">
                         <a href="#" class="latest-post-img">
-                            <img loading="lazy" class="img-fluid" src="{{ asset('images/banner/gaat3.jpg')}}" alt="img">
+                            <img loading="lazy" class="img-thumbnail" src="{{ asset('images/banner/gaat3.jpg')}}" alt="img">
                         </a>
                     </div>
                     <div class="post-body">

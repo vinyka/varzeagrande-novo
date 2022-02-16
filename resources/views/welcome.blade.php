@@ -173,7 +173,7 @@
         <div class="row text-center">
             <div class="col-12">
                 <h2 class="section-title">Comunicação</h2>
-                <h3 class="section-sub-title">Assessoria de imprenssa</h3>
+                <h3 class="section-sub-title">Assessoria de imprensa</h3>
             </div>
         </div>
         <!--/ Title row end -->

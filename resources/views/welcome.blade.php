@@ -1,8 +1,10 @@
 @extends('layouts.site') @section('content')
 
 
-<section id="main-container" class="main-container" style="background-color: #F9F9F9;">
-    @include('components.servicos1')
+
+
+<section id="main-container" class="main-container">
+    <img class="img-fluid" src="{{ asset('images/skyline.png') }} "> @include('components.servicos1')
 </section>
 
 
@@ -82,7 +84,8 @@
                             <div class="container">
                                 <div class="box-slider-content">
                                     <div class="box-slider-text">
-                                        <h2 class="box-slide-title">Várzea Grande vai aderir ao programa de Educação Ambiental</h2>
+                                        <h2 class="box-slide-title">Várzea Grande vai aderir ao programa de Educação Ambiental
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
@@ -105,7 +108,10 @@
                     </h2>
                     <h3 class="into-sub-title">Inscrições para o curso de Microempreendedor Individual poderão ser feitas até o dia 2 de fevereiro</h3>
                     <p>
-                        <audio controls="" class="podCastPlayer"><source src="http://78.129.234.163:17386/;stream.mp3" type="audio/mp3">Seu navegador não suporta o elemento de áudio.</audio>
+                        <audio controls="" class="podCastPlayer">
+                            <source src="http://78.129.234.163:17386/;stream.mp3" type="audio/mp3">Seu navegador não
+                            suporta o elemento de áudio.
+                        </audio>
                     </p>
 
 
@@ -120,7 +126,8 @@
                             </div> -->
                                 <div class="post-info">
                                     <h4 class="entry-title">
-                                        <a href="#"><img src="https://img.icons8.com/ios/18/000000/block-microphone--v2.png">#02 - {{ date("d/m/Y")}} - We Just Completes $17.6 Million Medical Clinic In Mid-missouri</a>
+                                        <a href="#"><img src="https://img.icons8.com/ios/18/000000/block-microphone--v2.png">#02 - {{ date("d/m/Y")}} - We Just Completes $17.6 Million Medical Clinic In Mid-missouri
+                                        </a>
                                     </h4>
                                 </div>
                             </li>
@@ -188,7 +195,9 @@
                     </div>
                     <div class="post-body">
                         <h4 class="post-title">
-                            <a href="#" class="d-inline-block">Sábado tem Dia "D" contra a Covid-19 para crianças em Várzea Grande</a></h4>
+                            <a href="#" class="d-inline-block">Sábado tem Dia "D" contra a Covid-19 para crianças em
+                                Várzea Grande</a>
+                        </h4>
                         </a>
                         </h4>
                         <div class="latest-post-meta">
@@ -211,7 +220,8 @@
                     </div>
                     <div class="post-body">
                         <h4 class="post-title">
-                            <a href="#" class="d-inline-block">Cursos de curta e longa duração estão sendo realizados em Várzea Grande</a>
+                            <a href="#" class="d-inline-block">Cursos de curta e longa duração estão sendo realizados em
+                                Várzea Grande</a>
                         </h4>
                         <div class="latest-post-meta">
                             <span class="post-item-date">
@@ -233,7 +243,8 @@
                     </div>
                     <div class="post-body">
                         <h4 class="post-title">
-                            <a href="#" class="d-inline-block">Educação promove Formação para Articuladores e Monitores do Programa ETA  </a>
+                            <a href="#" class="d-inline-block">Educação promove Formação para Articuladores e Monitores
+                                do Programa ETA </a>
                         </h4>
                         <div class="latest-post-meta">
                             <span class="post-item-date">

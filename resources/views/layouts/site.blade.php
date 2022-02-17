@@ -77,50 +77,48 @@
         <!--/ Topbar end -->
         <!-- Header start -->
         <header id="header" class="header-one">
-            <div class="bg-white">
+            <div style="background-color: rgb(0, 105, 55);">
                 <div class="container">
                     <div class="logo-area">
                         <div class="row align-items-center">
-                            <div class="logo col-lg-4 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                            <div class="logo col-lg-12 text-center text-lg-center mb-3 mb-md-5 mb-lg-0">
                                 <a class="d-block" href="index.html">
-                                    <img class="img-fluid" loading="lazy" src="{{  asset('images/logo.svg') }}" alt="Prefeitura de Várzea Grande">
+                                    <img class="img-fluid" loading="lazy" src="{{  asset('images/logo_branca.png') }}" alt="Prefeitura de Várzea Grande">
                                 </a>
                             </div>
                             <!-- logo end -->
 
-                            <div class="col-lg-8 header-right">
-                                <img class="img-fluid" src="{{ asset('images/pre-cadastro-vacina.jpg')}}">
-                                <!-- <ul class="top-info-box">
-                  <li>
-                    <div class="info-box">
-                      <div class="info-box-content">
-                          <p class="info-box-title">Call Us</p>
-                          <p class="info-box-subtitle"><a href="tel:(+9) 847-291-4353">(+9) 847-291-4353</a></p>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="info-box">
-                      <div class="info-box-content">
-                          <p class="info-box-title">Email Us</p>
-                          <p class="info-box-subtitle"><a href="mailto:office@Constra.com">office@Constra.com</a></p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="last">
-                    <div class="info-box last">
-                      <div class="info-box-content">
-                          <p class="info-box-title">Global Certificate</p>
-                          <p class="info-box-subtitle">ISO 9001:2017</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="header-get-a-quote">
-                    <a class="btn btn-primary" href="contact.html">Get A Quote</a>
-                  </li>
-                </ul> -->
-                                <!-- Ul end -->
-                            </div>
+                            <!-- <div class="col-lg-8 header-right">                                
+                                <ul class="top-info-box">
+                                    <li>
+                                        <div class="info-box">
+                                            <div class="info-box-content">
+                                                <p class="info-box-title">Call Us</p>
+                                                <p class="info-box-subtitle"><a href="tel:(+9) 847-291-4353">(+9) 847-291-4353</a></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info-box">
+                                            <div class="info-box-content">
+                                                <p class="info-box-title">Email Us</p>
+                                                <p class="info-box-subtitle"><a href="mailto:office@Constra.com">office@Constra.com</a></p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="last">
+                                        <div class="info-box last">
+                                            <div class="info-box-content">
+                                                <p class="info-box-title">Global Certificate</p>
+                                                <p class="info-box-subtitle">ISO 9001:2017</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header-get-a-quote">
+                                        <a class="btn btn-primary" href="contact.html">Get A Quote</a>
+                                    </li>
+                                </ul>                                
+                            </div> -->
                             <!-- header right end -->
                         </div>
                         <!-- logo area end -->
@@ -137,8 +135,8 @@
                         <div class="col-lg-12">
                             <nav class="navbar navbar-expand-lg navbar-dark p-0">
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
 
                                 <div id="navbar-collapse" class="collapse navbar-collapse">
                                     <ul class="nav navbar-nav mr-auto">
@@ -163,7 +161,8 @@
                                         </li>
 
                                         <li class="nav-item dropdown">
-                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Serviços </a>
+                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Serviços
+                                            </a>
                                             <!-- <ul class="dropdown-menu" role="menu">
                             <li><a href="projects.html">Projects All</a></li>
                             <li><a href="projects-single.html">Projects Single</a></li>
@@ -203,7 +202,8 @@
                           </ul> -->
                                         </li>
 
-                                        <li class="nav-item"><a class="nav-link" href="contact.html">Plano diretor</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="contact.html">Plano diretor</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </nav>
@@ -219,8 +219,9 @@
 
                     <div class="search-block" style="display: none;">
                         <label for="search-field" class="w-100 mb-0">
-            <input type="text" class="form-control" id="search-field" placeholder="Digite aqui e pressione enter">
-          </label>
+                            <input type="text" class="form-control" id="search-field"
+                                placeholder="Digite aqui e pressione enter">
+                        </label>
                         <span class="search-close">&times;</span>
                     </div>
                     <!-- Site search end -->
@@ -262,8 +263,8 @@
 
                     <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
                         <button class="btn btn-primary" title="Back to Top">
-            <i class="fa fa-angle-double-up"></i>
-          </button>
+                            <i class="fa fa-angle-double-up"></i>
+                        </button>
                     </div>
 
                 </div>

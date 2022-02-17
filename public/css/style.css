@@ -136,24 +136,22 @@ a.read-more:hover {
     color: #222;
 }
 
+
 /* Section border e margin - IMG Proporcional*/
 
-.img-thumbnail{
+.img-thumbnail {
     max-width: 300px;
     height: 200px;
 }
 
-section#ts-features, section#news{
-    margin-top: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 10px;
+section#ts-features,
+section#news {
     min-height: 360px;
     position: relative;
-    background: #f2f5f4;
-    border-radius: 25px;
+    background: #E7F0EB;
     padding: 20px;
-  }
+}
+
 
 /* Fim section border e margin */
 
@@ -213,7 +211,7 @@ a:focus {
 }
 
 .solid-bg {
-    background: #f9f9f9;
+    background: #FFF;
 }
 
 .dark-bg {
@@ -810,7 +808,7 @@ ul.navbar-nav>li.active>a {
 
 .logo img {
     width: auto;
-    height: 75px;
+    height: 100px;
 }
 
 .header-two .logo img {
@@ -3824,7 +3822,7 @@ label {
 }
 
 .bordaIcone {
-    background-color: #FFF;
+    background-color: #e7f0eb;
     margin: 5px;
     padding: 20px;
     border-radius: 10px;

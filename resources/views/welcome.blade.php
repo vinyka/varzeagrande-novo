@@ -1,10 +1,7 @@
 @extends('layouts.site') @section('content')
 
-
-
-
 <section id="main-container" class="main-container">
-    <img class="img-fluid" src="{{ asset('images/skyline.png') }} "> @include('components.servicos1')
+    @include('components.servicos1')
 </section>
 
 

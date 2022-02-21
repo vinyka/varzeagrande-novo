@@ -31,6 +31,11 @@ class FrontendController extends Controller
         return view('conteudo');
     }
 
+    public function expediente()
+    {
+        return view('expediente');
+    }
+
     public function blank()
     {
         return view('blank');

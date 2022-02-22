@@ -13,7 +13,7 @@ class FrontendController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -29,5 +29,15 @@ class FrontendController extends Controller
     public function conteudo()
     {
         return view('conteudo');
+    }
+
+    public function expediente()
+    {
+        return view('expediente');
+    }
+
+    public function blank()
+    {
+        return view('blank');
     }
 }

@@ -4,6 +4,7 @@
 <section id="main-container" class="main-container">
     <div class="container">
         <div class="row">
+<<<<<<< HEAD
         <div id="conteudo">
         <div class="item-page">
             <div class="page-header">
@@ -294,6 +295,13 @@
         </div>
     </div>
 </div> <!-- Main row end -->
+=======
+
+            Blank Page!
+
+        </div>
+        <!-- Main row end -->
+>>>>>>> ca726044c0bdcba78e9679117c688062392197ce
 
     </div>
     <!-- Conatiner end -->
